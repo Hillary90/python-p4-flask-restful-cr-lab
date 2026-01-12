@@ -22,6 +22,7 @@ class Plants(Resource):
         response = [plant.to_dict() for plant in plants]
         return make_response(response,200)
     
+    
     def post(self):
         data = request.get_json()
         new_plant = Plant(
